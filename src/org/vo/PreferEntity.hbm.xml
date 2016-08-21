@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="org.vo.PreferEntity" table="prefer" schema="price_hub">
+        <id name="id">
+            <column name="id" sql-type="int(11)"/>
+        </id>
+        <property name="preferTime">
+            <column name="prefer_time" sql-type="timestamp"/>
+        </property>
+        <many-to-one name="user" column="user_id" class="org.vo.UserEntity" cascade="all"/>
+        <many-to-one name="preference" column="preference_id" class="org.vo.PreferenceEntity" cascade="all"/>
+    </class>
+</hibernate-mapping>

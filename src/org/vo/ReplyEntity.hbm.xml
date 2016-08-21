@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="org.vo.ReplyEntity" table="reply" schema="price_hub">
+        <id name="replyId">
+            <column name="reply_id" sql-type="int(11)"/>
+        </id>
+        <property name="reply">
+            <column name="reply" sql-type="varchar(150)" length="150"/>
+        </property>
+        <property name="replyTime">
+            <column name="reply_time" sql-type="timestamp"/>
+        </property>
+        <property name="view">
+            <column name="view" sql-type="int(11)"/>
+        </property>
+    </class>
+</hibernate-mapping>

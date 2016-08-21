@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="org.vo.GoodsEntity" table="goods" schema="price_hub">
+        <id name="id">
+            <column name="id" sql-type="int(11)"/>
+        </id>
+        <property name="productName">
+            <column name="product_name" sql-type="varchar(255)"/>
+        </property>
+        <property name="productCover">
+            <column name="product_cover" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="productParam">
+            <column name="product_param" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="priceJd">
+            <column name="price_jd" sql-type="double" precision="-1" not-null="true"/>
+        </property>
+        <property name="priceAmazon">
+            <column name="price_amazon" sql-type="double" precision="-1" not-null="true"/>
+        </property>
+        <property name="priceOne">
+            <column name="price_one" sql-type="double" precision="-1" not-null="true"/>
+        </property>
+        <property name="nameJd">
+            <column name="name_jd" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="nameAmazon">
+            <column name="name_amazon" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="nameOne">
+            <column name="name_one" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="linkJd">
+            <column name="link_jd" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="linkAmazon">
+            <column name="link_amazon" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="linkOne">
+            <column name="link_one" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="classification">
+            <column name="classification" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <set name="remarks" cascade="all">
+            <key column="id"/>
+            <one-to-many class="org.vo.RemarkEntity"/>
+        </set>
+    </class>
+</hibernate-mapping>
