@@ -5,4 +5,24 @@
         "http://struts.apache.org/dtds/struts-2.3.dtd">
 
 <struts>
+    <package name="default" extends="struts-default">
+        <action name="signin" class="signinAction" method="signin">
+            <result name="success">index_user.jsp</result>
+            <result name="error">500.jsp</result>
+        </action>
+        <action name="signup" class="signinAction" method="signup">
+            <result name="success">sign.jsp</result>
+            <result name="error">500.jsp</result>
+        </action>
+        <action name="general" class="generalAction" method="general">
+            <result name="success">general.jsp</result>
+        </action>
+        <action name="detail" class="detailAction" method="detail">
+            <result name="success">detail.jsp</result>
+        </action>
+        <action name="remark" class="remarkAction" method="remark">
+            <result name="success">detail.jsp</result>
+            <result name="error">500.jsp</result>
+        </action>
+    </package>
 </struts>

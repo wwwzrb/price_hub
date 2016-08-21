@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <!DOCTYPE hibernate-mapping PUBLIC
-    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
     <class name="org.vo.UserEntity" table="user" schema="price_hub">
@@ -15,7 +15,7 @@
             <column name="user_pwd" sql-type="varchar(50)" length="50"/>
         </property>
         <property name="userImage">
-            <column name="user_image" sql-type="varchar(50)" length="50" not-null="true"/>
+            <column name="user_image" sql-type="varchar(50)" length="50" />
         </property>
         <property name="userTime">
             <column name="user_time" sql-type="timestamp"/>

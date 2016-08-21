@@ -54,6 +54,11 @@
         <property name="sessionFactory" ref="sessionFactory"/>
     </bean>
 
+    <bean id="signinAction" class="org.action.SignAction"/>
+    <bean id="signupAction" class="org.action.SignAction"/>
+    <bean id="generalAction" class="org.action.GoodsAction"/>
+    <bean id="detailAction" class="org.action.GoodsAction"/>
+    <bean id="remarkAction" class="org.action.GoodsAction"/>
 
 
 </beans>
