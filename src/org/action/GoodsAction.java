@@ -34,7 +34,13 @@ public class GoodsAction {
         Map session = ActionContext.getContext().getSession();
         List<General> generals=goodsService.getGeneral(this.getPageNow(),this.getPageSize(),this.getClassification());
         session.put("general",generals);
-        Pager page=new Pager(this.getPageNow(),goodsService.getSize(this.getClassification()));
+        Pager page;
+        if(session.get("page")!=null){
+            page=new Pager(this.getPageNow(),((Pager)session.get("page")).getTotalSize());
+        }
+        else{
+            page=new Pager(this.getPageNow(),goodsService.getSize(this.getClassification()));
+        }
         session.put("page",page);
         session.put("classification",this.getClassification());
         return SUCCESS;
