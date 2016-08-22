@@ -59,6 +59,8 @@
     <bean id="generalAction" class="org.action.GoodsAction"/>
     <bean id="detailAction" class="org.action.GoodsAction"/>
     <bean id="remarkAction" class="org.action.GoodsAction"/>
-
+    <bean id="followAction" class="org.action.UserAction"/>
+    <bean id="viewAction" class="org.action.UserAction"/>
+    <bean id="viewFollowAction" class="org.action.UserAction"/>
 
 </beans>

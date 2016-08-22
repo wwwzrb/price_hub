@@ -24,5 +24,17 @@
             <result name="success">detail.jsp</result>
             <result name="error">500.jsp</result>
         </action>
+        <action name="follow" class="followAction" method="follow">
+            <result name="success">contacts.jsp</result>
+            <result name="error">500.jsp</result>
+        </action>
+        <action name="view" class="viewAction" method="view">
+            <result name="success">profile.jsp</result>
+            <result name="error">500.jsp</result>
+        </action>
+        <action name="viewFollow" class="viewFollowAction" method="viewFollows">
+            <result name="success">contacts.jsp</result>
+            <result name="error">500.jsp</result>
+        </action>
     </package>
 </struts>

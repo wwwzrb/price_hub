@@ -143,7 +143,7 @@
                                 <s:iterator value="#detail.remarks" id="remarks">
                                     <div class="comment">
                                         <div class="content">
-                                            <a class="author"><s:property value="#remarks.userName"/></a>
+                                            <a href="view.action?userId=<s:property value="#remarks.userId"/>"><s:property value="#remarks.userName"/></a>
                                             <div class="metadata">
                                                 <span class="date"><s:property value="#remarks.remarkTime"/></span>
                                             </div>

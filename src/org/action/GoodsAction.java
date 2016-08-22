@@ -35,7 +35,7 @@ public class GoodsAction {
         List<General> generals=goodsService.getGeneral(this.getPageNow(),this.getPageSize(),this.getClassification());
         session.put("general",generals);
         Pager page;
-        if(session.get("page")!=null){
+        if(session.get("page")!=null&&this.getClassification().equals(session.get("classification"))){
             page=new Pager(this.getPageNow(),((Pager)session.get("page")).getTotalSize());
         }
         else{

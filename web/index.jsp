@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-    <title>H+ 后台主题UI框架 - 首页示例四</title>
+    <title>index</title>
 
     <link rel="shortcut icon" href="favicon.ico"> <link href="css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
     <link href="css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">

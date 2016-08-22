@@ -1,3 +1,4 @@
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <%--
 Created by IntelliJ IDEA.
 User: wz
@@ -16,7 +17,7 @@ To change this template use File | Settings | File Templates.
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit">
-    <title>主页</title>
+    <title>index_user</title>
 
 
     <!--[if lt IE 9]>
@@ -29,7 +30,7 @@ To change this template use File | Settings | File Templates.
     <link href="css/animate.min.css" rel="stylesheet">
     <link href="css/style.min862f.css?v=4.1.0" rel="stylesheet">
 </head>
-
+<s:set name="user" value="#session['user']"/>
 <body class="fixed-sidebar full-height-layout gray-bg" style="overflow:hidden">
 <div id="wrapper">
     <!--左侧导航开始-->
@@ -49,7 +50,7 @@ To change this template use File | Settings | File Templates.
                         <ul class="dropdown-menu animated fadeInRight m-t-xs">
                             <li><a class="J_menuItem" href="form_avatar.html">修改头像</a>
                             </li>
-                            <li><a class="J_menuItem" href="profile.html">个人资料</a>
+                            <li><a class="J_menuItem" href="view.action?userId=<s:property value="#user.userId"/>">个人资料</a>
                             </li>
                             <li><a class="J_menuItem" href="contacts.html">联系我们</a>
                             </li>
@@ -70,7 +71,7 @@ To change this template use File | Settings | File Templates.
                 </li>
 
                 <li>
-                    <a class="J_menuItem" href="contacts.html">
+                    <a class="J_menuItem" href="viewFollow.action?<s:property value="#user.userId"/>">
                         <i class="fa fa-user"></i>
                         <span class="nav-label">联系人</span>
                     </a>

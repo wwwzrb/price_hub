@@ -1,3 +1,4 @@
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
@@ -24,27 +25,22 @@
     <div class="wrapper wrapper-content animated fadeInRight">
         <div class="row">
             <div class="col-sm-4">
+                <s:iterator value="#session['follows']" id="follow">
                 <div class="contact-box">
-                    <a href="profile.jsp">
+                    <a href="view.action?<s:property value="#follow.userId"/>">
                         <div class="col-sm-4">
                             <div class="text-center">
-                                <img alt="image" class="img-circle m-t-xs img-responsive" src="img/a2.jpg">
-                                <div class="m-t-xs font-bold">CTO</div>
+                                <img  alt="image" class="img-circle m-t-xs img-responsive" src="img/a2.jpg">
                             </div>
                         </div>
                         <div class="col-sm-8">
-                            <h3><strong>奔波儿灞</strong></h3>
-                            <p><i class="fa fa-map-marker"></i> 甘肃·兰州</p>
-                            <address>
-                            <strong>Baidu, Inc.</strong><br>
-                            E-mail:xxx@baidu.com<br>
-                            Weibo:<a href="#">http://weibo.com/xxx</a><br>
-                            <abbr title="Phone">Tel:</abbr> (123) 456-7890
-                        </address>
+                            <h3><strong><s:property value="#follow.userName"/></strong></h3>
+                            <p><s:property value="#follow.userTime"/> </p>
                         </div>
                         <div class="clearfix"></div>
                     </a>
                 </div>
+                </s:iterator>
             </div>
         </div>
     </div>
